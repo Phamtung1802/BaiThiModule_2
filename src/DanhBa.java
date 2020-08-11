@@ -42,9 +42,9 @@ public class DanhBa {
         danhBa.add(new LienLac(hoTen,SDT,diaChi,email));
         inDanhba();
     }
-    public int find(String soDienThoai){
+    public int find(String tenLienLac){
         for(LienLac timkiem:danhBa){
-            if(timkiem.getSoDienThoai().equals(soDienThoai)){
+            if(timkiem.getHoTen().equals(tenLienLac)){
                 return danhBa.indexOf(timkiem);
             }
         }

@@ -87,12 +87,11 @@ public class GiaoDienNguoiDung {
                 System.out.println("1. yes");
                 System.out.println("2. no");
                 int nextchoice=input.nextInt();
-                if(choice==1){
+                if(nextchoice==2){
                     return;
                 }
-                System.out.println("NHAP DUONG DAN FILE: ");
-                String tenFile=input.nextLine();
-                DanhBa.getInstance().loadDanhBa(tenFile);
+                DanhBa.getInstance().loadDanhBa("Contact2.txt");
+                System.out.println("da load xong");
             }
             if(choice==7){
                 System.out.println("-------------------GhiFile-------------------");
