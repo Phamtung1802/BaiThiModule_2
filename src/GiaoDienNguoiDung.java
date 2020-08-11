@@ -94,6 +94,15 @@ public class GiaoDienNguoiDung {
                 String tenFile=input.nextLine();
                 DanhBa.getInstance().loadDanhBa(tenFile);
             }
+            if(choice==7){
+                System.out.println("-------------------GhiFile-------------------");
+                try{
+                    DanhBa.getInstance().WriteFile("Contact.txt");
+                }catch (Exception e){
+                    System.out.println("Loi");
+                }
+
+            }
         }
     }
 

@@ -96,5 +96,25 @@ public class DanhBa {
         danhBa.addAll(list);
         return list;
     }
+    public static void WriteFile(String path) throws IOException {
+        File file=new File(path);
+        FileWriter writer=new FileWriter(file);
+        for(LienLac lienLac:danhBa) {
+            try {
+                writer.write(lienLac.getHoTen()+","+lienLac.getSoDienThoai()+","+lienLac.getDiaChi()+","+lienLac.getEmail()+"\n");
+                writer.flush();
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("loi");
+            }
+        }
+        try {
+            writer.close();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("loi");
+        }
+    }
 
 }
